@@ -21,6 +21,9 @@ export const adminNavbar = ()=>{
         <li class ="nav-item active">
             <Link class = "nav-link" to="#">Available Blood</Link>
         </li>
+        <li class ="nav-item active">
+            <Link class = "nav-link" to="#">Users</Link>
+        </li>
     </ul>)
 }
 
