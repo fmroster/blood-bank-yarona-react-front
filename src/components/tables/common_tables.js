@@ -1,4 +1,4 @@
-const donationsTable = ()=>{
+export const donationsTable = ()=>{
     //code that goes here gets from the API
 
     return(
@@ -38,7 +38,7 @@ const donationsTable = ()=>{
     )
 }
 
-const appointmentsTable = () => {
+export const appointmentsTable = () => {
     // Code to fetch appointment data from the API
 
     return (
@@ -46,25 +46,24 @@ const appointmentsTable = () => {
             <table>
                 <thead>
                     <tr>
-                        <th colSpan="5">
-                            Appointments</th> {/* colspan="5" to span five columns */}
+                        <th colSpan="4">
+                            Appointments
+                        </th> 
                     </tr>
                     <tr>
                         <th>
                             Appointment ID
-                            </th>
+                        </th>
                         <th>
                             Appointment Date
-                            </th>
+                        </th>
                         <th>
                             Location
-                            </th>
-                        <th>
-                            Hospital
-                            </th>
+                        </th>
+                        
                         <th>
                             Desired Appointment Date
-                            </th> {/* New column for desired appointment date */}
+                        </th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -72,19 +71,16 @@ const appointmentsTable = () => {
                         <tr key={appointment.id}>
                             <td>
                                 {appointment.id}
-                                </td>
+                            </td>
                             <td>
                                 {appointment.date}
-                                </td>
+                            </td>
                             <td>
                                 {appointment.location}
-                                </td>
-                            <td>
-                                {appointment.hospital}
-                                </td>
+                            </td>
                             <td>
                                 {appointment.desiredDate}
-                                </td> {/* Render desired appointment date */}
+                            </td> 
                         </tr>
                     ))}
                 </tbody>
@@ -94,8 +90,9 @@ const appointmentsTable = () => {
 }
 
 
-const requestsTable = () =>{
+export const requestsTable = () =>{
 
+    //Api code here
     return (
         <div>
             <thead>
@@ -130,7 +127,7 @@ const requestsTable = () =>{
                             {request.bloodtype}
                         </td>
                         <td>
-                            {request.location} {/* Should we show the nearest blood bank or hospital which has available bags?   */}
+                            {request.location} 
                         </td>
 
 
