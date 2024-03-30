@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { adminNavbar, donorNavBar } from './user_navbar'
+import { adminNavbar, donorNavBar, commonUserNavBar as CommomUserNavbar } from './user_navbar'
 import { anonymousDiv } from './anonymous_navbar'
-const navbar =({isLoggedIn, isAdmin})=>{
+export const navbar =({isLoggedIn, isAdmin})=>{
     return(
         <nav class ="navbar navbar-expand-lg navbar-dark background-nav">
             <div class ="container-fluid">
@@ -14,10 +14,10 @@ const navbar =({isLoggedIn, isAdmin})=>{
                 {isLoggedIn ? (
                         isAdmin ? <>
                             {adminNavbar()}
-                            <CommonUserNavbar />
+                            <CommomUserNavbar/>
                         </> : <>
                             {donorNavBar()}
-                            <CommonUserNavbar />
+                            <CommomUserNavbar/>
                         </>
                     ) : (
                         <>{anonymousDiv()}</>
